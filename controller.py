@@ -34,7 +34,7 @@ def ClickButton():
             sch_class = input('Введите класс: ')
             if sch_class in dict_base.keys():
                 add_pupil(dict_base, sch_class, new_pupil)
-                save_base(dict_base)
+                save_base(dict_base, path_base)
             else:
                 print('Такого класса нет в базе')
             check = input('Для возврата нажмите Enter')
@@ -45,7 +45,7 @@ def ClickButton():
                 del_pupil = input('Введите фамилию имя ученика: ')
                 if del_pupil in def_mod.dict_all_pupil(dict_base):
                     delete_pupil(dict_base, sch_class, del_pupil)
-                    save_base(dict_base)
+                    save_base(dict_base, path_base)
                 else:
                     print('Такого ученика нет в классе')
             else:
@@ -60,7 +60,7 @@ def ClickButton():
                     new_class = input('Введите новый класс ученика: ')
                     add_pupil(dict_base, new_class, chng_pupil)
                     delete_pupil(dict_base, sch_class, chng_pupil)
-                    save_base(dict_base)
+                    save_base(dict_base, path_base)
                 else:
                     print('Такого ученика нет в классе')
             else:

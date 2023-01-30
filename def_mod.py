@@ -45,8 +45,8 @@ def dict_all_pupil(dict_base):
                 all_pupil[el] = num_class
     return all_pupil
 
-def save_base(dict_base):
-    with open('path_base.json', 'w', encoding='UTF-8') as file_base:
+def save_base(dict_base, path):
+    with open(path, 'w', encoding='UTF-8') as file_base:
         json.dump(dict_base, file_base, ensure_ascii=False)
 
 def add_pupil(dict_base, sch_class, new_pupil):
